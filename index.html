@@ -54,7 +54,7 @@
 
   .hero-visual{position:relative;display:flex;justify-content:center;align-items:center;min-height:380px}
   .halo{position:absolute;width:min(440px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 45%,#FBE3C4,#F2C98E 45%,rgba(242,201,142,0) 72%);filter:blur(2px)}
-  .hero-visual .prod{position:relative;width:min(420px,92%);mix-blend-mode:multiply;filter:drop-shadow(0 30px 30px rgba(40,20,8,.28));z-index:2}
+  .hero-visual .prod{position:relative;width:min(380px,86%);background:#fff;padding:24px;border-radius:28px;box-shadow:0 34px 54px -22px rgba(40,20,8,.45);z-index:2}
   .pricetag{position:absolute;z-index:3;right:2%;bottom:8%;background:var(--red);color:#fff;border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);transform:rotate(-3deg)}
   .pricetag small{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
   .pricetag b{font-family:'Bricolage Grotesque';font-size:1.5rem;display:block;line-height:1}
@@ -362,6 +362,4 @@
 <script>
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
-</body>
-</html>
+</scr
