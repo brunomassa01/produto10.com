@@ -61,8 +61,8 @@
   .micro{font-size:13px;color:var(--ink-soft);max-width:200px;line-height:1.4}
 
   .hero-visual{position:relative;display:flex;justify-content:center;align-items:center;min-height:380px}
-  .halo{position:absolute;width:min(480px,98%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 48%,#E8703F,#D6531E 44%,rgba(214,83,30,0) 72%);filter:blur(3px)}
-  .hero-visual .prod{position:relative;width:min(430px,94%);filter:drop-shadow(0 30px 34px rgba(40,20,8,.4));z-index:2;mix-blend-mode:multiply}
+  .prodframe{position:relative;width:min(440px,96%);background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px;box-shadow:var(--shadow);z-index:2}
+  .hero-visual .prod{position:relative;width:100%;border-radius:10px;z-index:2}
   .pricetag{position:absolute;z-index:3;right:2%;bottom:8%;background:var(--red);color:#fff;border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);transform:rotate(-3deg)}
   .pricetag small{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
   .pricetag b{font-family:'Bricolage Grotesque';font-size:1.5rem;display:block;line-height:1}
@@ -99,7 +99,7 @@
   .hook p{font-size:15px;color:var(--ink-soft);margin:0}
   .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .gallery figure{background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px;box-shadow:var(--shadow-soft);overflow:hidden}
-  .gallery img{aspect-ratio:1;object-fit:contain;mix-blend-mode:multiply}
+  .gallery img{aspect-ratio:1;object-fit:contain}
   .gallery figure:first-child{grid-column:1/3}
   .gallery figure:first-child img{aspect-ratio:16/10}
 
@@ -113,12 +113,12 @@
   /* product card */
   .pcard{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin:22px 0;box-shadow:var(--shadow);display:grid;grid-template-columns:300px 1fr}
   @media(max-width:760px){.pcard{grid-template-columns:1fr}}
-  .pcard .imgcol{background:linear-gradient(160deg,#FFF9EF,#F3E6D2);display:flex;align-items:center;justify-content:center;padding:26px;border-right:1px solid var(--line)}
+  .pcard .imgcol{background:#fff;display:flex;align-items:center;justify-content:center;padding:26px;border-right:1px solid var(--line)}
   @media(max-width:760px){.pcard .imgcol{border-right:none;border-bottom:1px solid var(--line)}}
-  .pcard .imgcol img{width:100%;max-width:250px;filter:drop-shadow(0 16px 20px rgba(40,20,8,.22));mix-blend-mode:multiply}
+  .pcard .imgcol img{width:100%;max-width:250px}
   .pcard .body{padding:28px}
   .pcard.featured{border:2px solid var(--red)}
-  .pcard.featured .imgcol{background:linear-gradient(160deg,#FFF1E3,#FBDFC2)}
+  .pcard.featured .imgcol{background:#fff}
   .badge{display:inline-block;font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;padding:6px 12px;border-radius:100px;background:var(--red);color:#fff}
   .badge.olive{background:var(--graphite)}
   .badge.gold{background:var(--gold);color:#3a2c12}
@@ -194,9 +194,8 @@
       </div>
     </div>
     <div class="hero-visual reveal">
-      <div class="halo"></div>
       <span class="bestseller-flag">Mais vendido</span>
-      <img class="prod" src="https://m.media-amazon.com/images/I/71enGNvpFyL._AC_SL1200_.jpg" alt="Hollyland Lark M2, o melhor microfone de lapela sem fio para criadores em 2026">
+      <div class="prodframe"><img class="prod" src="https://m.media-amazon.com/images/I/71enGNvpFyL._AC_SL1200_.jpg" alt="Hollyland Lark M2, o melhor microfone de lapela sem fio para criadores em 2026"></div>
       <div class="pricetag"><small>a partir de</small><b>R$ 314</b></div>
     </div>
   </div>
